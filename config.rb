@@ -30,7 +30,7 @@ activate :directory_indexes
 # )
 
 data.works.each do |path, work|
-  proxy path, 'work.html'
+  proxy path, '/work.html', locals: { path: path, work: work }, layout: 'layout'
 end
 
 # Helpers
