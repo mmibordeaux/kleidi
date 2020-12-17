@@ -29,6 +29,10 @@ activate :directory_indexes
 #   },
 # )
 
+data.works.each do |path, work|
+  proxy path, 'work.html'
+end
+
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
