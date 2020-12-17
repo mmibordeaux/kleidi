@@ -1,18 +1,18 @@
 ---
-title: Kleidi 
+title: Kleidi
 ---
 
 <div class="jumbotron jumbotron-fluid">
 	<div class="kleidi container">
 		<h1>Kleidi</h1>
 		<h2>le dispositif qui rend accessible l'art visuel aux <span>non-voyants</span></h2>
-		<img src="../images/braille.png" class="img-fluid">
+		<img src="/images/braille.png" class="img-fluid">
 	</div>
 </div>
 
 <div class="container">
 	<div id="about" class="row">
-		<div class="col-md-5 offset-md-2 col-xs-2">
+		<div class="col-md-6">
 			<h3>Qui sommes-nous?</h3>
 			<p>Répondre à une problématique d’utilité sociale et s’inscrire dans une démarche de citoyenneté active : telles sont les ambitions que s’est fixé le projet Kleidi. L’art visuel vient de trouver un dispositif innovant qui permet aux malvoyants et non-voyants de toucher du bout des doigts des œuvres artistiques contemporaines. </p>
 			<p>L’idée se matérialise par une maquette extrudée, apposée à côté des créations et qui regroupe quatre éléments : un modèle 2D de l’œuvre, un texte en braille, un texte pour les voyants et enfin un QR code qui dirige vers une audiodescription détaillée.</p>
@@ -20,145 +20,147 @@ title: Kleidi
 			<p>Si le numérique a un immense pouvoir de transformation, il s’agit d’initier ici à l’université un nouveau mouvement d’accessibilité technologique en direction des arts et de la culture. Le projet trouve toute son ampleur grâce au partenariat privilégié avec le musée d’Aquitaine.</p>
 			<p>Cette initiative est portée dans le cadre d’un workshop dédié aux projets sociaux innovants, au sein du département MMI (Métiers du Multimédias et de l’Internet). Toutes les compétences des étudiants (développeurs, graphistes, photographes, programmeurs, game designers, chargés de projet, community managers, rédacteurs numériques etc.) sont mobilisées et mises à contribution.</p>
 		</div>
-		<div class="col-md-1 infos text-muted">
+		<div class="offset-md-1 col-md-2 infos text-muted">
 			<h3>Infos pratiques</h3>
 			<ul class="list-unstyled">
 				<li>
-					<img src="../images/instagram.png" width= "60px" height="60px">  </img>
+					<img src="/images/instagram.png" width= "60px" height="60px">  </img>
 					<a target="_blank" href="https://www.instagram.com/kleidi_art/?hl=fr">Instagram</a>
 					 </li>
 				 <li>
-					<img class="twitter" src="../images/twitter.png" width= "50px" height="50px"></img>
+					<img class="twitter" src="/images/twitter.png" width= "50px" height="50px"></img>
 					<a target="_blank" href="https://twitter.com/Kleidi06221424">Twitter</a>
 				 </li>
 				 <li>
-					<img src="../images/facebook.png" width= "65px" height="65px"></img>
+					<img src="/images/facebook.png" width= "65px" height="65px"></img>
 					<a target="_blank" href="https://www.facebook.com/kleidi.org/">Facebook</a>
 				 </li>
 			</ul>
 		</div>
 	</div>
-</div>
 
-<div class="container">
-	<div id="map" class="row">
-		<div class="col">
-			<iframe width="100%" height="500px" frameBorder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/kleidi-oeuvres_303115?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=797646#15/44.8308/-0.5670"></iframe>
-			<a href="https://umap.openstreetmap.fr/fr/map/kleidi-oeuvres_303115"><p>Voir en plein écran</p></a>
-		</div>
-	</div>
-</div>
+	<h2>Carte des œuvres</h2>
+	<iframe width="100%" height="500px" frameBorder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/kleidi-oeuvres_303115?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&datalayers=797646#15/44.8308/-0.5670"></iframe>
+	<a href="https://umap.openstreetmap.fr/fr/map/kleidi-oeuvres_303115"><p>Voir en plein écran</p></a>
 
-<div id="audiodesc" class="container">
-	<div class="row mt-5">
-		<div class="col">
-			<h2 class="audiodesc_title">Oeuvres du musée d'aquitaine</h2>
-		</div>
+	<h2 id="audiodesc">Œuvres du Musée d'Aquitaine</h2>
+
+	<div class="row">
+	  <% data.works.each do |path, work| %>
+			<div class="col-md-3 mb-4">
+				<a href="/<%= path %>">
+					<img alt="Audioguide pour <%= work.title %> de <%= work.author %>" class="img-fluid" src="/images/<%= path %>.jpg"><br>
+					<%= work.title %>
+				</a>
+			</div>
+	  <% end %>
 	</div>
+
 	<div class="row justify-content-center pb-5">
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col-md-3" >
 			<a href="denicheurs" class="audiodesc_box">
-				<img alt="Audioguide pour l'oeuvre de Arnaudin Felix" class="audiodesc_box_item" src="images/denicheurs.jpg">
+				<img alt="Audioguide pour l'œuvre de Félix Arnaudin" class="img-fluid" src="images/denicheurs.jpg">
+				<p>Félix Arnaudin</p>
 			</a>
 		</div>
-		
-		<div class="col d-flex justify-content-center py-3" > 
+
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="diane" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre d" class="audiodesc_box_item" src="images/diane.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="leBrick" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/leBrick.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="chevalier" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/chevalier.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="enlevement" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/enlevement.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="hercule" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/hercule.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="jupiter" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/jupiter.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="martinique" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/martinique.jpg">
 			</a>
-			<div class="col d-flex justify-content-center py-3" > 
+			<div class="col d-flex justify-content-center py-3" >
 			<a href="promenade" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/promenade.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="soufriere" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Letendre" class="audiodesc_box_item" src="images/soufriere.jpg">
 			</a>
 		</div>
 
 		</div>
-		
+
 	</div>
 
 	<div class="row mt-5">
-		<div class="col">	
+		<div class="col">
 			<h2 class="audiodesc_title">Arborescence</h2>
 		</div>
 	</div>
 
 	<div class="row justify-content-center pb-5">
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="ador" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Ador" class="audiodesc_box_item" src="images/ador/ador_process_6.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="ksele" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Ksele" class="audiodesc_box_item" src="images/ksele/ksele_oeuvre.png">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="semor" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Semor" class="audiodesc_box_item" src="images/semor/semor_oeuvre.png">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="tomaslacque" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Tomas Lacque" class="audiodesc_box_item" src="images/thomaslacque/thomaslacque_oeuvre.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="asu" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Asu" class="audiodesc_box_item" src="images/asu/asu_process_4.png">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="romainfroquet" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Romain Froquet" class="audiodesc_box_item" src="images/romainfroquet/romainfroquet_oeuvre.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="monogonzales" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Mono Gonzales" class="audiodesc_box_item" src="images/monogonzales/monogonzales_process_6.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<a href="stephanecarricondo" class="audiodesc_box">
 				<img alt="Audioguide pour l'oeuvre de Stéphane Carricondo" class="audiodesc_box_item" src="images/stephanecarricondo/stephanecarricondo_oeuvre.jpg">
 			</a>
 		</div>
-		<div class="col d-flex justify-content-center py-3" > 
+		<div class="col d-flex justify-content-center py-3" >
 			<div class="audiodesc_box_dummy">
 				<div class="audiodesc_box_item_dummy"> </div>
 			</div>
