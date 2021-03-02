@@ -87,9 +87,12 @@ footer {
 	height: 100px;
 }
 
-#tuto{
+.tuto{
 	margin-left: 600px;
+	border:1px solid blue;
 
-font-size:18px;
 
 	}
+.tuto:hover {
+	background:white;
+}
