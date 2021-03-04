@@ -8,24 +8,34 @@ title: Guide de production
       <div class="position-fixed ">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" href="#sommaire"> Sommaire</a>
+            <a class="nav-link menu-gauche" href="#sommaire"> Sommaire</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item menu-gauche">
             <a class="nav-link " href="#introduction"> Introduction</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item menu-gauche">
             <a class="nav-link" href="#oeuvre-realisable"> Type d'oeuvre réalisable</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item menu-gauche">
             <a class="nav-link " href="#info-oeuvre"> Récuperer les informations de l'oeuvre</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#detourage"> Détourage de l'oeuvre</a>
+          <li class="nav-item menu-gauche">
+            <a class="nav-link menu-gauche" href="#detourage"> Détourage de l'oeuvre</a>
+          </li>
+          <li class="nav-item menu-gauche">
+            <a class="nav-link " href="#plaque">La plaque</a>
+          </li>
+          <li class="nav-item menu-gauche">
+            <a class="nav-link " href="#audioguide">L'audioguide</a>
+          </li>
+          <li class="nav-item menu-gauche">
+            <a class="nav-link " href="#acsd">ACSD template</a>
+          </li>
+          <li class="nav-item menu-gauche">
+            <a class="nav-link " href="#publier">Publier</a>
           </li>
 
-          <li class="nav-item ">
-            <a class="btn" data-bs-toggle="collapse" aria-controls="collapseExample" aria-expended="false" href="#detourage"> Détourage de l'oeuvre</a>          
-          </li>
+          
         </ul>
       </div>
     </nav>
@@ -78,11 +88,11 @@ title: Guide de production
         </ol>
           <h5><strong>ACSD template</strong></h5>
           <br>
-          <h5><strong>PUBLIER #KLEIDI </strong></h5>
+          <h5 id="introduction"><strong>PUBLIER #KLEIDI </strong></h5>
 
 
 
-        <h2 id="introduction">Introduction</h2>
+        <h2 >Introduction</h2>
 
         <p>Bienvenue sur le guide <strong>Kleidi</strong> ! Ce guide a pour but de vous expliquer comment réaliser, de A à Z, une plaque Kleidi, soit de la réalisation de l’audiodescription à l’impression de la plaque en 3D. À la fin de ce guide, vous pourrez vous-même réaliser votre plaquette grâce aux outils et descriptions décrivant chacune des étapes.</p>
         <p>La plaque <strong>Kleidi</strong> se compose de 2 éléments : </p>
@@ -95,15 +105,15 @@ title: Guide de production
         </ul>
           <img id= "normes" src="/images/braille.png">
           <h5><strong>Les normes</strong></h5>
-          <p>La plaque finale fournie par Kleidi est modifiable, mais doit respecter un ensemble de points, définis en suivant. <br> La mise en page globale n’est pas modifiable, elle doit être identique au document que nous vous mettons à disposition. <br>Le logo et la phrase d’accroche / slogan ne doivent pas être modifiés. <br> Possibilitée d’ajouter votre logo en bas du document, sous la phrase d’accroche, dans une version exclusivement en noir et blanc. <br>Le document doit être entièrement en noir et blanc.<br>Les textes relatifs au documents sont modifiables, en respectant la police, sa taille et sa graisse.<br>Le QR code, doit être changer pour rediriger vers l’audio description lié à la plaque, mais il ne peut pas changer de place ni de taille. </p>
+          <p>La plaque finale fournie par Kleidi est modifiable, mais doit respecter un ensemble de points, définis en suivant. <br> La mise en page globale n’est pas modifiable, elle doit être identique au document que nous vous mettons à disposition. <br>Le logo et la phrase d’accroche / slogan ne doivent pas être modifiés. <br> Possibilitée d’ajouter votre logo en bas du document, sous la phrase d’accroche, dans une version exclusivement en noir et blanc. <br>Le document doit être entièrement en noir et blanc.<br>Les textes relatifs au documents sont modifiables, en respectant la police, sa taille et sa graisse.<br id="oeuvre-realisable">Le QR code, doit être changer pour rediriger vers l’audio description lié à la plaque, mais il ne peut pas changer de place ni de taille. </p>
         
 
-        <h2 id="oeuvre-realisable">Type d'oeuvre réalisable</h2>
+        <h2>Type d'oeuvre réalisable</h2>
 
         <p>Avec notre dispositif, toutes les œuvres ne peuvent pas être réalisées, seul une œuvre en 2D(tableau, dessin…) peut être intégré à la plaque Kleidi, les sculptures et en œuvres en 3D sont quant à elles impossibles à réaliser.</p>
         <br>
 
-        <p>PS: Il est aussi possible de réaliser une Plaque Kleidi avec une oeuvre photographique , cependant, c’est à vous de définir ce qui vas être réalisable et intéressant de faire ressortir
+        <p id="info-oeuvre" >PS: Il est aussi possible de réaliser une Plaque Kleidi avec une oeuvre photographique , cependant, c’est à vous de définir ce qui vas être réalisable et intéressant de faire ressortir
         </p>
 
         <h2>Récupérer les informations de l'oeuvre</h2>
@@ -114,7 +124,7 @@ title: Guide de production
           <li>Nom de l’oeuvre </li>
           <li>L’Auteur</li>
           <li>Dimension de l’oeuvre</li>
-          <li>Technique(peinture à l’huile…)</li>
+          <li id="detourage">Technique(peinture à l’huile…)</li>
           <li>Une image de l’oeuvre</li>
           <li>La date de création</li>
           </ul>
@@ -143,7 +153,7 @@ title: Guide de production
           <li>Une fois que vous avez détouré tous vos éléments principaux dans différents calques, il va falloir les séparer en fonction de leur niveau de hauteur. C'est-à-dire que vous devez renommer vos calques avec l’épaisseur d’impression 3D (en cm) voulu pour chaque élément</li>
         </ol>
 
-        <h4><strong>3ème étape - L’export :</strong></h4>
+        <h4 id="plaque"><strong>3ème étape - L’export :</strong></h4>
         <ol>
           <li>Enregistrer le fichier illustrator en .ai pour que l’on puisse le réutiliser plus tard</li>
         </ol>
@@ -197,7 +207,7 @@ title: Guide de production
           <li>Pour vectoriser un bloc texte il vous suffit de sélectionner le calque désiré et de faire clic droit>vectoriser</li>
         </ol>
 
-          <p>Le QR code est quant à lui déjà vectorisé.</p>
+          <p id="audioguide">Le QR code est quant à lui déjà vectorisé.</p>
           <p>Une fois que tous vos éléments ont été vectorisés, allez dans fichier>exporter et sélectionnez PDF dans le format d’export voulu et veillez à sélectionner la bonne destination de votre fichier une fois  exporté.</p>
 
         <h2>L'audioguide</h2>
@@ -223,7 +233,7 @@ title: Guide de production
           <p>Tutoriel audacity enregistrement : <br><a href="https://www.youtube.com/watch?v=F-BimCVm-TM "> https://www.youtube.com/watch?v=F-BimCVm-TM </a></p>
           <p>Optionnelle : pour ajouter de la plus-value un travail de sound design peut être effectué. Vous pouvez ajouter des bruitages et des sons d’ambiance qui collent avec l'œuvre.</p>
 
-          <h4><strong>3ème étape : publication</strong></h4>
+          <h4 id="acsd"><strong>3ème étape : publication</strong></h4>
           <p>Pour cette étape, il vous suffit de mettre en ligne votre enregistrement sur une page avec une url dédiée qui sera utilisé par la suite avec le qr code.</p>
         <h2>ACSD template</h2>
 
@@ -231,7 +241,7 @@ title: Guide de production
 
         <p>N'oubliez pas de fournir en pièce jointe le fichier pdf vectoriel ainsi que votre fichier illustrator vectorisé</p>
 
-        <p>
+        <p id="publier">
           Si vous souhaitez produire une plaque kleidi avec une autre imprimerie, respectez au maximum <a href="#normes">les normes</a> que nous vous proposons.
         </p>
 
